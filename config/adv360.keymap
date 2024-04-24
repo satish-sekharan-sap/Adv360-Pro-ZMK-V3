@@ -17,11 +17,11 @@
             bindings = <&kp RET>;
         };
 
-        hyper_key: hyper {
+        hyper_key: hyper_key {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LC(LGUI)))>;
-            label = "HYPER";
+            label = "HYPER_KEY";
         };
 
         #endif
