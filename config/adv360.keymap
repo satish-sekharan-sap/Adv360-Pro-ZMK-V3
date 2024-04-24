@@ -15,7 +15,7 @@
         hyper_key: hyper_key {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(LGUI))))>;
+            bindings = <&kp LGUI &kp LEFT_ALT &kp LCTRL &kp LEFT_SHIFT>;
             label = "HYPER_KEY";
         };
 
