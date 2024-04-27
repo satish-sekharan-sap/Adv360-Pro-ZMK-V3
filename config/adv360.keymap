@@ -218,7 +218,7 @@
 
         sw_prog_layer {
             bindings = <&tog NAV>;
-            key-positions = <63 64>;
+            key-positions = <49 50>;
         };
 
     };
@@ -299,7 +299,7 @@
         nav {
             bindings = <
                 &kp EQUAL  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5        &tog KEYPAD                                                 &mo MOD    &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &kp MINUS
-                &kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T         &to QWERTYP                                                 &kp PSCRN  &kp BROWSER_PREVTAB   &kp BROWSER_SEARCH          &kp BROWSER_NEXTTAB          &kp BROWSER_NEXTTAB         &kp P            &kp BSLH
+                &kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T         &to QWERTYP                                                 &kp PSCRN  &kp BROWSER_PREVTAB   &kp BROWSER_SEARCH          &kp BROWSER_NEWTAB          &kp BROWSER_NEXTTAB         &kp P            &kp BSLH
                 &kp ESC    &hm_l LGUI A  &hm_l LALT S  &hm_l LCTRL D  &hm_l LSHFT F  &lt KEYPAD G  &to DVORAKP  &kp LCTRL  &kp HOME      &kp PG_UP   &kp RCTRL  &kp INS   &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &hm_r RGUI SEMI  &kp SQT
                 &kp LSHFT  &kp Z         &kp X         &kp C          &kp V          &kp B                                 &kp END       &kp PG_DN                        &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHFT
                 &mo FN     &kp GRAVE     &kp CAPS      &kp LEFT       &kp RIGHT                    &kp SPACE    &kp LGUI   &kp HYPER      &kp LALT  &kp ENTER  &kp BSPC          &kp UP         &kp DOWN       &kp LBKT      &kp RBKT         &mo FN
