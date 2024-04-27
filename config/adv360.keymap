@@ -9,6 +9,11 @@
 #define xxxxxx &none
 
 #define HYPER    LS(LC(LA(LGUI)))
+#define BROWSER_SEARCH LG(F) 
+#define BROWSER_NEWTAB LG(T) 
+#define BROWSER_NEXTTAB LG(LA(RIGHT))
+#define BROWSER_PREVTAB LG(LA(LEFT))
+
 
 #define QWERTY 0
 #define QWERTYP 1
@@ -17,6 +22,7 @@
 #define KEYPAD 4
 #define FN 5
 #define MOD 6
+#define NAV 7
 
 
 / {
@@ -202,6 +208,21 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <41 42>;
+        };
+
+        sw_prog_layer {
+            bindings = <&tog NAV>;
+            key-positions = <63 64>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -272,6 +293,16 @@
                 xxxxxx  xxxxxx        xxxxxx        xxxxxx        xxxxxx        xxxxxx        xxxxxx       xxxxxx  xxxxxx     &bt BT_CLR  xxxxxx      &rgb_ug RGB_MEFS_CMD 5  xxxxxx  xxxxxx      xxxxxx      xxxxxx  xxxxxx  xxxxxx
                 xxxxxx  xxxxxx        xxxxxx        xxxxxx        &macro_ver    xxxxxx                             xxxxxx     xxxxxx                                          xxxxxx  xxxxxx      xxxxxx      xxxxxx  xxxxxx  xxxxxx
                 xxxxxx  xxxxxx        xxxxxx        xxxxxx        xxxxxx                      xxxxxx       xxxxxx  xxxxxx     xxxxxx      &bl BL_TOG  &rgb_ug RGB_TOG                 &bl BL_INC  &bl BL_DEC  xxxxxx  xxxxxx  xxxxxx
+            >;
+        };
+
+        nav {
+            bindings = <
+                &kp EQUAL  &kp N1        &kp N2        &kp N3         &kp N4         &kp N5        &tog KEYPAD                                                 &mo MOD    &kp N6  &kp N7         &kp N8         &kp N9        &kp N0           &kp MINUS
+                &kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T         &to QWERTYP                                                 &kp PSCRN  &kp BROWSER_PREVTAB   &kp BROWSER_SEARCH          &kp BROWSER_NEXTTAB          &kp BROWSER_NEXTTAB         &kp P            &kp BSLH
+                &kp ESC    &hm_l LGUI A  &hm_l LALT S  &hm_l LCTRL D  &hm_l LSHFT F  &lt KEYPAD G  &to DVORAKP  &kp LCTRL  &kp HOME      &kp PG_UP   &kp RCTRL  &kp INS   &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &hm_r RGUI SEMI  &kp SQT
+                &kp LSHFT  &kp Z         &kp X         &kp C          &kp V          &kp B                                 &kp END       &kp PG_DN                        &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RSHFT
+                &mo FN     &kp GRAVE     &kp CAPS      &kp LEFT       &kp RIGHT                    &kp SPACE    &kp LGUI   &kp HYPER      &kp LALT  &kp ENTER  &kp BSPC          &kp UP         &kp DOWN       &kp LBKT      &kp RBKT         &mo FN
             >;
         };
     };
